@@ -1,4 +1,4 @@
-# **note 20230922**
+# ---note 20230922---
 
 # I. Introduction
 
@@ -12,34 +12,33 @@
     - human 21000 genes / elegans 20000 genes
 - coding + noncoding (Canonical ncRNAs, Small ncRNAs, Long ncRNAs)
 
----
 
 ## 2) Method : Sequencing & Computing
 
 ### 2.1 Information
 
 - images and sequences
----
+
 ### 2.2 Model
 
 - model: A mathematical model is an abstract description of a concrete system using mathematical concepts and language. The process of developing a mathematical model is termed mathematical modeling. (from wikipedia)
 - Regression Model: Linear -> Logistic Regression
 - Tree Model: Decision Tree -> Random forest
 - Neural Network Model -> Deep Learning
----
+
 ### 2.3 Algorithm
 
 - algorithm: In mathematics and computer science, an algorithm is a finite sequence of rigorous instructions, typically used to solve a class of specific problems or to perform a computation. Algorithms are used as specifications for performing calculations and data processing. (from wikipedia)
 - Number Sorting Algorithm
 - Dynamic Programming Algorithm
----
+
 
 #### *model vs algorithm*
 
 - ***By definition***: A model is an expression that represents a hidden pattern or relationship in the data, and an algorithm is a set of well-defined and well-orderd programs.
 - ***By application***: Models can be used to make predictions or reasoning, and algorithms can be used to solve complex problems or complete tasks.
 - ***relationship***: A model is the representation of what has already been learned by an algorithm.
----
+
 
 ## 3) Example Studies
 
@@ -83,7 +82,7 @@
 ### 4.1 quick start
 
 ```
-# A Quick Start in Terminal after you installed Docker software in your computer:
+#A Quick Start in Terminal after you installed Docker software in your computer:
 docker pull ubuntu # download an image of ubuntu
 docker run -i -t ubuntu # run (create) a container of ubuntu
 ```
@@ -91,6 +90,7 @@ docker run -i -t ubuntu # run (create) a container of ubuntu
 ### 4.2 Install and Use Docker in Windows
 
 - Setup Windows Subsystem for Linux
+
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
@@ -98,10 +98,10 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 - update WSL1 to WSL2
     - Download [WSL2 Linux kernel update package](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) for x64 machines
 ```
-# enable the Virtual Machine Platform optional feature
+#enable the Virtual Machine Platform optional feature
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 
-# Set WSL 2 as your default version
+#Set WSL 2 as your default version
 wsl --set-default-version 2
 ```
 
@@ -117,19 +117,19 @@ docker load -i D:\APPs\docker\images\bioinfo_PartI-PartII-PartIII1-3.tar.gz
 
 - Run a container from an Image
 ```
-# Share folder
+#Share folder
 docker run --name=pangdazhi_linux -dt -h pangdazhi --restart unless-stopped -v D:\APPs\docker\bioinfo_tsinghua_share:/home/test/share xfliu1995/bioinfo_tsinghua:2
 
-# Change access
+#Change access
 docker exec -u root pangdazhi_linux chown test:test /home/test/share
 ```
 
 - Run and exit the container
 ```
-# run
+#run
 docker exec -it pangdazhi_linux bash
 
-# exit
+#exit
 exit
 ```
 
@@ -157,7 +157,7 @@ exit
 
 
 
-# **study plan**
+# ---study plan---
 # I. Programming Skill
 ## 1) Weeks 1-5: Linux
 
@@ -165,13 +165,13 @@ exit
 - Understand the basic operating principles of the linux system.
 - Master the ability to write bash scripts.
 - In my personal scientific research, a large number of sequencing files need to be processed. In the past, I used to manually operate the files one by one. As the number of sequencing samples increased, manual operation became more and more difficult. I want to learn how to *automate batch processing of a large number of sequencing files* using bash scripts.
----
+
 ## 2) Weeks 6-16: R
 
 - Master the basic usage of R code.
 - I used to use r a little bit, but it was usually just simple commands. I want to master the ability to write *complex loops and complex functions*, simplify my code, and increase the readability of my code.
 - The code I have written in the past is not reusable, and often code written for one project is difficult to reuse in another project. I hope to enhance the reusability of my code through learning, making it *more modular, more versatile, and easier to debug*.
----
+
 ## 3) Weeks 11-16: Python (optional)
 
 - I have never written python code and would like to understand the basics of python.
